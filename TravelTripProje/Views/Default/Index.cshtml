@@ -1,0 +1,116 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="header-banner">
+<div class="wrap">
+    <div class="banner">
+        <div class="indent">
+            <h2 class="indent-left margin-bot">Seyahat Bloguma Hoş Geldiniz</h2>
+            <div class="banner-left">
+                <div class="con-text">
+                    <div class="grid1-img">
+                        <img src="~/web/images/glass.png" alt="">
+                    </div>
+                    <div class="grid1-desc">
+                        <p>Restoranlar</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="con-text">
+                    <div class="grid1-img">
+                        <img src="~/web/images/flight.png" alt="">
+                    </div>
+                    <div class="grid1-desc">
+                        <p>Uçuşlar</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="con-text">
+                    <div class="grid1-img">
+                        <img src="~/web/images/group.png" alt="">
+                    </div>
+                    <div class="grid1-desc">
+                        <p>Yapılacaklar</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="con-text">
+                    <div class="grid1-img">
+                        <img src="~/web/images/key.png" alt="">
+                    </div>
+                    <div class="grid1-desc">
+                        <p>Kiralık Yerler</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="header_bottom_right_images">
+
+                <div class="slider" style="width:650px;height:350px">
+                    <ul class="rslides" id="slider1">
+                        @foreach (var item in Model)
+                        {
+                            <li style="width:650px;height:350px"><img src="@item.BlogImage" alt=""></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+<div class"content">
+    <div class="wrap">
+        <div class="wrapper">
+            <div class="con-top">
+                <p>
+
+
+            Seyahat etmeyi sevenlerin adresi burası! Dünyanın dört bir yanındaki
+            eşsiz destinasyonları, gizli cennetleri ve kültürler arası yolculukları
+            keşfetmenin en güzel yolu. Sadece bir tık uzaklıkta olan bu sanal
+            serüven, sizi farklı coğrafyalara taşıyacak.
+
+        </p>
+
+
+        <p>
+
+            Eşsiz Deneyimler: Yazarlarımızın kendi gözlemleri ve deneyimleri üzerinden yazdığı içeriklerle dolu. Gerçek yaşam hikayeleri ve önerilerle dolu olan yazılarımız, sizin için unutulmaz anılar yaratmanın anahtarını sunuyor.
+        </p>
+
+        <p>
+
+            Gizli Cennetler: Turist kalabalıklarından uzak, keşfedilmemiş noktalara özel rehberlik ediyoruz. Sıra dışı ve sakin destinasyonlarda geçen maceralarımızla, geleneksel turistik rotalardan sıyrılıyoruz.
+        </p>
+
+        <p>
+
+
+
+            Kültürler Arası Bir Yolculuk: Farklı kültürleri ve gelenekleri keşfetmek isteyenler için bir hazinedir. Yemek kültürlerinden festivallere, yerel adetlerden günlük yaşama kadar pek çok konuda bilgi ve öneriler sunuyoruz
+        </p>
+            </div>
+            @Html.Action("Partial1")
+            <div class="grids">
+                <div class="box1">
+                    @Html.Action("Partial3")
+                    @*@Html.Action("PartialPlaces")*@
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

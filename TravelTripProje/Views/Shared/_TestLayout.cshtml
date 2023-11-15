@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>Gezi Blog Sayfam | Ana Sayfa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/web/js/jquery.min.js"></script>
+    <script src="/web/js/responsiveslides.min.js"></script>
+
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <br />
+            <br />
+            <marquee direction=right>Muammer Metin Seyahat Blog Sayfası</marquee>
+            <div class="con-right">
+
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav">
+                <li><a href="/Default/Index">Ana Sayfa</a></li>
+                <li><a class="hsubs" href="/Hakkimizdas/Index">Hakkımızda</a></li>
+                <li><a class="hsubs" href="/Blogs/Index">Blogum</a></li>
+                @*<li><a href="/Contact/Index/">İletişim</a></li>*@
+                <li><a href="/GirisYap/Login/">Giriş Yap</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class"content">
+
+        @RenderBody()
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p>&copy; @DateTime.Now.Year Muammer Metin Tüm Hakları Saklıdır. </a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
